@@ -1,0 +1,1 @@
+<div class='text-end' style='color:grey; font-size:11px; padding:1px 5px;'>{{ $label }}</div>

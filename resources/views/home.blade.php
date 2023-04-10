@@ -54,7 +54,7 @@
 		$s .= "</div>";
 		return "$s\n";
 	}
-
+ 
 @endphp
 
 @section('main')

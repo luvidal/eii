@@ -2,12 +2,12 @@
     --body-color:#e4e9f7;
     --sidebar-color:#fff;
     --primary-color:#666;
-    --primary-color-light:#f6f5ff;
-    --toggle-color:#ddd;
+    --primary-color-light:#CCC;
+    --toggle-color:#DDD;
     --text-color:#555;
 
-    --border-color:magenta;
-    --border-color-light:lime;
+    --border-color:#AAA;
+    --border-color-light:#CCC;
 
     --tran-03:all 0.2s ease;
     --tran-03:all 0.3s ease;
@@ -24,13 +24,13 @@ body {
 body.dark {
     --body-color:#18191a;
     --sidebar-color:#242526;
-    --primary-color:#3a3b3c;
-    --primary-color-light:#3a3b3c;
-    --toggle-color:#fff;
+    --primary-color:#666;
+    --primary-color-light:#444;
+    --toggle-color:#FFF;
     --text-color:#ccc;
 
-    --border-color:red;
-    --border-color-light:cyan;
+    --border-color:#555;
+    --border-color-light:#444;
 }
   
 /* ===== Sidebar ===== */
@@ -156,56 +156,38 @@ body.dark .home .text {
   color: var(--text-color);
 }
 
-
 /* -------------------------------------------------------------------- */
 
-
-
-input::placeholder, select::placeholder, textarea::placeholder
+input, select, textarea, button, input:focus, input:active, select:focus, select:active, textarea:focus, textarea:active, button:focus
 {
-	color:var(--border-color) !important; /* #DDD !important; */
-}
-
-body.dark input::placeholder, body.dark select::placeholder, body.dark textarea::placeholder
-{
-	color:var(--border-color-light) !important; /* #DDD !important; */
-}
-
-input[type=date]:invalid::-webkit-datetime-edit-fields-wrapper /* needs required */
-{
-	color:var(--border-color) !important; /* #DDD !important; */
-}
-
-input[type=date]:valid::-webkit-datetime-edit-fields-wrapper /* needs required */
-{
-	color:var(--border-color) !important; /* #DDD !important; */
-}
-
-input:focus, input:active, select:focus, select:active, textarea:focus, textarea:active
-{
-  outline:none !important;
-  box-shadow:none !important;
-  border-color:var(--border-color) !important; /* #DDD !important; */
-}
-
-button:focus
-{
+  color:var(--text-color) !important;
+  border-color:var(--border-color) !important;
   outline:none !important;
   box-shadow:none !important;
 }
 
-input[type=date]::-webkit-calendar-picker-indicator
+input::placeholder, select::placeholder, textarea::placeholder, input[type=date]:invalid::-webkit-datetime-edit-fields-wrapper /* needs required */
 {
-	/* margin-left:-18; */
-	/* opacity:.5; */
+	color:var(--primary-color-light) !important;
 }
 
+input[type='range'] {
+  accent-color:var(--text-color);
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  filter: invert(0.4);
+}
+
+body.dark input[type='date']::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  filter: invert(0.6);
+}
 
 /* -------------------------------------------------------------------- */
 
-fieldset { border-color:magenta !important; }
-fieldset .fieldtext { color :magenta; background-color:var(--body-color); }
+div.fieldset { border-color:var(--border-color-light) !important; }
+div.fieldset .fieldtext { color:var(--border-color-light) !important; background-color:var(--body-color); }
 
-body.dark fieldset { border-color:cyan !important; }
-body.dark fieldset .fieldtext { color :cyan; background-color:var(--body-color); }
 

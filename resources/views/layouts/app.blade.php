@@ -24,7 +24,6 @@
 
         </nav>
         <section class='home'>
-                <div class='text'>Dashboard Sidebar</div>
                 @include('sections.tratamientos')
         </section>
     </body>

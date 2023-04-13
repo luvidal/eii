@@ -1,1 +1,1 @@
-<div class='text-end' style='color:grey; font-size:11px; padding:1px 5px;'>{{ $label }}</div>
+<div class='text-end text' style='font-size:12px; padding:1px 5px; opacity:0.5;'>{{ $label }}</div>

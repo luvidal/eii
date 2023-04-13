@@ -44,8 +44,6 @@ body.dark {
 .sidebar.close {
     width:88px;
 }
-  
-  /* ===== Reusable code - Here ===== */
 
 .sidebar .icon {
 	display:flex;
@@ -68,7 +66,7 @@ body.dark {
 }
 
 .sidebar .toggle {
-    position:absolute; top:120px; right:-20px;
+    position:absolute; top:120px; right:-15px;
     transform:translateY(-50%) rotate(180deg);
     height:40px;
     width:40px;
@@ -102,21 +100,21 @@ body.dark {
   }
   .sidebar li a:hover .icon,
   .sidebar li a:hover .text {
-	color:var(--sidebar-color);
+	  color:var(--sidebar-color);
   }
   body.dark .sidebar li a:hover .icon,
   body.dark .sidebar li a:hover .text {
-	color:var(--text-color);
+	  color:var(--text-color);
   }
 
 .form-check-input:checked {
-    background-color:var(--text-color);
-    border-color:var(--text-color);
+  background-color:var(--text-color);
+  border-color:var(--text-color);
 }
 
 body.dark .form-check-input:checked {
-    background-color:var(--primary-color-light);
-    border-color:var(--primary-color-light);
+  background-color:var(--primary-color-light);
+  border-color:var(--primary-color-light);
 }
 
 .form-switch .form-check-input {
@@ -171,8 +169,12 @@ input::placeholder, select::placeholder, textarea::placeholder, input[type=date]
 	color:var(--primary-color-light) !important;
 }
 
+div:has(>input[type=range]) {
+  border-color:var(--border-color) !important;
+}
+
 input[type='range'] {
-  accent-color:var(--text-color);
+  accent-color:var(--primary-color);
 }
 
 input[type='date']::-webkit-calendar-picker-indicator {
@@ -185,9 +187,22 @@ body.dark input[type='date']::-webkit-calendar-picker-indicator {
   filter: invert(0.6);
 }
 
+.accordion-item {
+  color:var(--text-color) !important;
+  border-color:var(--border-color);
+  background-color:var(--body-color) !important;
+}
+
+.accordion-button {
+  background-color:var(--body-color) !important;
+  text-transform: uppercase;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='grey'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
 /* -------------------------------------------------------------------- */
 
 div.fieldset { border-color:var(--border-color-light) !important; }
 div.fieldset .fieldtext { color:var(--border-color-light) !important; background-color:var(--body-color); }
-
-

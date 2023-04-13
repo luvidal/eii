@@ -1,18 +1,18 @@
 <table id='harvbrad' cellpadding='5' class='mt-4'>
     <tr>
-        <td><b>Harvey-Bradshaw</b>
+        <td class='text'><b>Harvey-Bradshaw</b>
         <td><x-forms.input id='controles-indice_harvbrad' extra='readonly'/>
     <tr>
-        <td>Estado General
+        <td class='text'>Estado General
         <td><x-forms.select id='controles-harvbrad_estado' options='Muy Bien/Bien/Mal/Muy Mal/Terrible'/>
     <tr>
-        <td>Dolor Abdominal
+        <td class='text'>Dolor Abdominal
         <td><x-forms.select id='controles-harvbrad_dolor' options='Ninguno/Leve/Moderado/Severo'/>
     <tr>
-        <td>Masa Abdominal
+        <td class='text'>Masa Abdominal
         <td><x-forms.select id='controles-harvbrad_masa' options='No Tiene/Dudosa/Definida/Sensible'/>
     <tr>
-        <td>Complicaciones
+        <td class='text'>Complicaciones
         <td>
         <div id='acc-harvbrad_complicaciones' class='accordion'>
             <x-forms.accordion id='manifestaciones-1' header='Select options' class='text-black py-1 px-2' parent='acc-harvbrad_complicaciones'>

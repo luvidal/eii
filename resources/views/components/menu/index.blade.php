@@ -14,7 +14,7 @@
     </div>
 
     <div class='bottom-content mt-auto' style='margin-bottom:60px;'>
-        <x-menu.item text='Cerrar Sesión' icon='bx-log-out'/>
+        <x-menu.item id='logout' text='Cerrar Sesión' icon='bx-log-out'/>
         <x-menu.switch lightText='Modo Claro' darkText='Modo Oscuro'/>
     </div>
 </div>

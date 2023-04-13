@@ -9,7 +9,7 @@
     $props = implode(' ', array_filter(explode(' ', $props)));
 
 @endphp
-<div class='text-nowrap {{ $attributes->get("class") }}'>
+<div class='text-nowrap text {{ $attributes->get("class") }}'>
     <input type='radio' {!! $props !!} class='form-check-input me-1'>
     {{ $label }}
 </div>

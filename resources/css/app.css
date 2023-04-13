@@ -1,5 +1,26 @@
-a 
-{
-    text-decoration:none;
+a { text-decoration:none; }
+
+.section {
+    display:flex;
+    flex-flow:row wrap;
 }
 
+@media screen and (orientation:landscape)
+{
+	div.fieldset
+	{
+		height:600px;
+		width:400px; 
+		margin:0% 5% 5% 0%;
+	}
+}
+
+@media screen and (orientation:portrait)
+{
+	div.fieldset
+	{
+		width:90%;
+		max-width:400px;
+		margin:10px auto;
+	}
+}

@@ -1,4 +1,6 @@
-<div class='fieldset container position-relative border rounded p-5 my-5'>
-    <span class='fieldtext fs-6 fw-bold px-3 text-uppercase' style='position:absolute; top:-12px;'>{{ $label }}</span>
+<div class='fieldset border rounded py-5 px-3' style='position:relative;'>
+    <span class='fieldtext text-uppercase px-3' style='position:absolute; top:-12px;'>{{ $label }}</span>
+    <div style='overflow:auto; height:100%;'>
     {{ $slot }}
+    </div>
 </div>

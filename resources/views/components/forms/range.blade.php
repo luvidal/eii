@@ -15,7 +15,7 @@
     $props = implode(' ', array_filter(explode(' ', $props)));
 
 @endphp
-<div class='border rounded p-2 {{ $attributes->get("class") }}'>
+<div class='input-range border rounded p-4 {{ $attributes->get("class") }}'>
     <input type='range' {!! $props !!} class='form-control-range w-100'>
     <div class='d-flex d-flex justify-content-between px-2 text-muted w-100'>
         <small>{{ $mintext }}</small>

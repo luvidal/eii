@@ -80,5 +80,3 @@
     <x-forms.title text='Exámenes Solicitados' icon='fa-clipboard-list' class='mt-4'/>
     <x-forms.text id='controles-exámenes_solicitados' rows='4'></x-textarea>
 </x-forms.fieldset>
-
-

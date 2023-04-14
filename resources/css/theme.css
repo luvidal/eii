@@ -145,12 +145,12 @@ body.dark .switch::before {
   width: calc(100% - 78px);
 }
 
-.home .text {
+.home .text, .home td, .home th {
   background-color:var(--body-color);
   color: var(--text-color);
 }
 
-body.dark .home .text {
+body.dark .home .text, body.dark .home th, body.dark .home td {
   color: var(--text-color);
 }
 

@@ -1,4 +1,3 @@
-
 <x-forms.fieldset label='Sangre'>
     <div id='acordion-examensangre' class='accordion border-0'>
         <x-forms.accordion id='examensangre-1' header='Hemograma' parent='acordion-examensangre' state='show'>

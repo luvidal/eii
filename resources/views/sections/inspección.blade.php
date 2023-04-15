@@ -1,4 +1,3 @@
-
 <x-forms.fieldset label='Signos Vitales'>
     <div class='d-flex m-2'>
         <div class='w-50'><x-forms.title text='IMC' icon='fa-calculator'/></div>
@@ -26,7 +25,6 @@
         <div class='w-50'><x-forms.title text='Alt' icon='fa-ruler-vertical'/></div>
         <div class='w-50'><x-forms.input id='altura' type='decimal' empty='1.65' maxlen='4' sub='m'/></div>
     </div>
-
 </x-forms.fieldset>
 
 <x-forms.fieldset label='Examen por Sistemas'>

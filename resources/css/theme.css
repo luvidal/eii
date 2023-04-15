@@ -93,11 +93,13 @@ body.dark {
 	display:flex;
 	align-items:center;
 	transition:var(--tran-03);
-  } 
-  
-  .sidebar li a:hover {
-	background-color:var(--primary-color);
   }
+
+  .menuselected { background-color:var(--primary-color); }
+  
+  /* .sidebar li a:hover {
+	background-color:var(--primary-color);
+  } */
   .sidebar li a:hover .icon,
   .sidebar li a:hover .text {
 	  color:var(--sidebar-color);

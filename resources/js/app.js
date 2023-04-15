@@ -17,27 +17,36 @@ function SwitchColors()
 
 SwitchColors();
 
-/* ------------------------ SECTIONS ----------------------------- */
+/* ------------------------ SECTIONS & BUTTONS----------------------------- */
 
 const sections = document.getElementsByClassName('section')
-const section  = localStorage.getItem('section') || 's_0';
+const buttons  = document.getElementsByClassName('menubutton')
 
-for(let i = 0; i < sections.length; i++)
+const section  = localStorage.getItem('section') || 'section_0';
+const button   = localStorage.getItem('button');
+
+for(let i = 0; i < sections.length; i++) // show section
     sections[i].style.display = (sections[i].id == section) ? 'flex' : 'none';
 
+for(let j = 0; j < buttons.length; j++) // highlight menu button
+    buttons[j].style.backgroundColor = (buttons[j].id == button) ? 'var(--primary-color)' : 'transparent';
 
 /* ------------------------ BUTTONS ------------------------------ */
 
-const buttons = document.getElementsByClassName('menubutton')
+
 
 for(let i = 0; i < buttons.length; i++) 
 {
-    buttons[i].addEventListener('click', () => 
+    buttons[i].addEventListener('click', event => 
     {
-        const section = 's_' + buttons[i].id.split('_')[1];
+        const section = 'section_' + buttons[i].id.split('_')[1];
         localStorage.setItem('section', section);
-         
-        for(let i = 0; i < sections.length; i++)
+        localStorage.setItem('button', buttons[i].id);
+
+        for(let i = 0; i < sections.length; i++) // show section
             sections[i].style.display = (sections[i].id == section) ? 'flex' : 'none';
+
+        for(let j = 0; j < buttons.length; j++) // highlight menu button
+            buttons[j].style.backgroundColor = (buttons[j].id == buttons[i].id) ? 'var(--primary-color)' : 'transparent';
     })
 }

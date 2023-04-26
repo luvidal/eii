@@ -33,8 +33,6 @@ for(let j = 0; j < buttons.length; j++) // highlight menu button
 
 /* ------------------------ BUTTONS ------------------------------ */
 
-
-
 for(let i = 0; i < buttons.length; i++) 
 {
     buttons[i].addEventListener('click', event => 

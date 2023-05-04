@@ -52,14 +52,14 @@
     "src": "node_modules/boxicons/fonts/boxicons.woff2"
   },
   "resources/js/app.css": {
-    "file": "assets/app-130fc0d5.css",
+    "file": "assets/app-5ad75a0b.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
     "css": [
-      "assets/app-130fc0d5.css"
+      "assets/app-5ad75a0b.css"
     ],
-    "file": "assets/app-9fd11bed.js",
+    "file": "assets/app-5adf89b7.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },

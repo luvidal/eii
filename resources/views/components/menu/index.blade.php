@@ -1,11 +1,6 @@
 <div class='menu-bar d-flex flex-column h-100'>
 
-    <div class='d-flex p-2'>
-        <div class='icon border rounded-circle' style='min-width:40px; height:40px;'>
-            <i class='fa fa-staff-snake fa-2xl'></i>
-        </div>
-        <div class='text ms-2' style='font-size:40px; line-height:42px; '>EII</div>
-    </div>
+    <x-menu.logo/>
 
     <div class='menu' style='margin-top:8em;'>
         <ul class='m-0 p-0'>

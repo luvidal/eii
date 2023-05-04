@@ -10,12 +10,14 @@ document.querySelector("a[href='#']").addEventListener('click', e => e.preventDe
 
 function SwitchColors()
 {
-    body.classList.toggle('dark');
-    const switchText = document.getElementById('switchText');
-    switchText.innerHTML = body.classList.contains('dark') ? lightText : darkText;
+    const ifdark = body.classList.toggle('dark');
+    document.getElementById('switchText').innerHTML = ifdark ? lightText : darkText;
+    localStorage.setItem('session', ifdark ? 'dark' : 'light')
 }
 
-SwitchColors();
+const ifdark = localStorage.getItem('session') == 'dark';
+if (ifdark) SwitchColors();
+document.getElementById('switchText').innerHTML = ifdark ? lightText : darkText;
 
 /* ------------------------ SECTIONS & BUTTONS----------------------------- */
 
@@ -25,11 +27,8 @@ const buttons  = document.getElementsByClassName('menubutton')
 const section  = localStorage.getItem('section') || 'section_0';
 const button   = localStorage.getItem('button');
 
-for(let i = 0; i < sections.length; i++) // show section
-    sections[i].style.display = (sections[i].id == section) ? 'flex' : 'none';
-
-for(let j = 0; j < buttons.length; j++) // highlight menu button
-    buttons[j].style.backgroundColor = (buttons[j].id == button) ? 'var(--primary-color)' : 'transparent';
+SetSections(section);
+SetButtons(button);
 
 /* ------------------------ BUTTONS ------------------------------ */
 
@@ -39,12 +38,24 @@ for(let i = 0; i < buttons.length; i++)
     {
         const section = 'section_' + buttons[i].id.split('_')[1];
         localStorage.setItem('section', section);
-        localStorage.setItem('button', buttons[i].id);
+        SetSections(section);
 
-        for(let i = 0; i < sections.length; i++) // show section
-            sections[i].style.display = (sections[i].id == section) ? 'flex' : 'none';
-
-        for(let j = 0; j < buttons.length; j++) // highlight menu button
-            buttons[j].style.backgroundColor = (buttons[j].id == buttons[i].id) ? 'var(--primary-color)' : 'transparent';
+        const button = buttons[i].id;
+        localStorage.setItem('button', button);
+        SetButtons(button);
     })
+}
+
+function SetSections(selected)
+{
+    for(let i = 0; i < sections.length; i++)
+        sections[i].style.display = (sections[i].id == selected) ? 'flex' : 'none'; 
+}
+
+function SetButtons(selected)
+{
+    for(let j = 0; j < buttons.length; j++)
+        (buttons[j].id == selected) ? 
+            buttons[j].classList.add('selected') : 
+            buttons[j].classList.remove('selected');
 }

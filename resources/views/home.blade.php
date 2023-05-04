@@ -15,12 +15,12 @@
         <nav class='sidebar fixed-top z-2 h-100' style='padding:14px !important;'>
             <x-menu>
                 <x-menu.item id='button_1' text='Controles'    icon='bx-first-aid'/>
-                <x-menu.item id='button_2' text='Vacunas'      icon='fas bx-injection'/>
+                <x-menu.item id='button_2' text='Vacunas'      icon='bx-injection'/>
                 <x-menu.item id='button_3' text='Tratamientos' icon='bx-vial'/>
                 <x-menu.item id='button_4' text='Exámenes'     icon='bx-file'/>
                 <x-menu.item id='button_5' text='Inspección'   icon='bx-search'/>
             </x-menu>
-            <i id='btnShowHide' class='z-3 text-white bx bx-chevron-right bx-sm toggle'></i>
+            <i id='btnShowHide' class='z-3 bx bx-chevron-right bx-sm toggle'></i>
         </nav>
         <section class='home p-5'>
             <div id='section_0' class='section'>@include('sections.welcome')</div>

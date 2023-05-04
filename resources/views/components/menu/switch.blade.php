@@ -3,7 +3,7 @@
         <div class='form-switch text-center' style='min-width:60px; height:18px;'>
                 <input class='form-check-input my-0' type='checkbox' id='btnSwitch' style='width:30px; height:100%;'>
         </div>
-        <span id='switchText' class='text text-uppercase fs-5'></span>
+        <span id='switchText' class='text-uppercase fs-5'></span>
     </div>
 </li>
 <script>

@@ -11,7 +11,7 @@
 
 <x-forms.fieldset label='Manifestaciones ExtraIntestinales'>
     <div id='acc-manifestaciones' class='accordion border-0'>
-        <x-forms.accordion id='manifestaciones-1' header='Músculo - Esqueléticas' parent='acc-manifestaciones' state='show'>
+        <x-forms.accordion id='manifestaciones-1' header='Músculo - Esqueléticas' parent='acc-manifestaciones'>
             <x-forms.check name='controles-mei' label='Artritis Pauciarticular'/>
             <x-forms.check name='controles-mei' label='Espondilitis Anquilosante'/>
             <x-forms.check name='controles-mei' label='Polimiositos'/>

@@ -1,6 +1,6 @@
 <x-forms.fieldset label='Sangre'>
     <div id='acordion-examensangre' class='accordion border-0'>
-        <x-forms.accordion id='examensangre-1' header='Hemograma' parent='acordion-examensangre' state='show'>
+        <x-forms.accordion id='examensangre-1' header='Hemograma' parent='acordion-examensangre'>
             <div class='d-flex align-items-center m-2'>
                 <div class='w-50'>Fecha</div>
                 <div class='w-50'><x-forms.input id='hemograma-fecha' type='date'/></div>
@@ -177,31 +177,94 @@
 </x-forms.fieldset>
 
 <x-forms.fieldset label='Imágenes'>
-    <table id='imágenes' class='editable mt-3'>
+    <table id='imágenes' class='editable'>
 		<thead>
 			<th width='140'>Fecha</th>
 			<th width='200'>Informe</th>
 		</thead>
-		<tbody></tbody>
+		<tbody>
+            <tr>
+                <td>&nbsp;
+                <td>&nbsp;
+            <tr>
+                <td>&nbsp;
+                <td>&nbsp;
+            <tr>
+                <td>&nbsp;
+                <td>&nbsp;
+            <tr>
+                <td>&nbsp;
+                <td>&nbsp;
+            <tr>
+                <td>&nbsp;
+                <td>&nbsp;
+        </tbody>
 	</table>
 </x-forms.fieldset>
 
 <x-forms.fieldset label='Endoscopías'>
-    <table id='endoscopías' class='editable mt-3'>
+    <table id='endoscopías' class='editable'>
 		<thead>
 			<th width='140'>Fecha</th>
 			<th width='200'>Informe</th>
 		</thead>
-		<tbody></tbody>
+		<tbody>
+            <tr>
+                <td>&nbsp;
+                <td>&nbsp;
+            <tr>
+                <td>&nbsp;
+                <td>&nbsp;
+            <tr>
+                <td>&nbsp;
+                <td>&nbsp;
+            <tr>
+                <td>&nbsp;
+                <td>&nbsp;
+            <tr>
+                <td>&nbsp;
+                <td>&nbsp;
+        </tbody>
 	</table>
 </x-forms.fieldset>
 
 <x-forms.fieldset label='Histología'>
-    <table id='histología' class='editable mt-3'>
+    <table id='histología' class='editable'>
 		<thead>
 			<th width='140'>Fecha</th>
 			<th width='200'>Informe</th>
 		</thead>
-		<tbody></tbody>
+		<tbody>
+            <tr>
+                <td>&nbsp;
+                <td>&nbsp;
+            <tr>
+                <td>&nbsp;
+                <td>&nbsp;
+            <tr>
+                <td>&nbsp;
+                <td>&nbsp;
+            <tr>
+                <td>&nbsp;
+                <td>&nbsp;
+            <tr>
+                <td>&nbsp;
+                <td>&nbsp;
+            <tr>
+                <td>&nbsp;
+                <td>&nbsp;
+            <tr>
+                <td>&nbsp;
+                <td>&nbsp;
+            <tr>
+                <td>&nbsp;
+                <td>&nbsp;
+            <tr>
+                <td>&nbsp;
+                <td>&nbsp;
+            <tr>
+                <td>&nbsp;
+                <td>&nbsp;
+        </tbody>
 	</table>
 </x-forms.fieldset>

@@ -1,113 +1,90 @@
 :root {
-    --body-color:#e4e9f7;
-    --sidebar-color:#fff;
-    --primary-color:#666;
-    --primary-color-light:#CCC;
-    --toggle-color:#DDD;
-    --text-color:#555;
+  --tran-03:all 0.2s ease;
+  --tran-03:all 0.3s ease;
+  --tran-04:all 0.3s ease;
+  --tran-05:all 0.3s ease;
 
-    --border-color:#AAA;
-    --border-color-light:#CCC;
+  --body-color:aliceblue;
+  --primary-color:#666;
+  --primary-color-light:#CCC;
+  --toggle-color:#DDD;
+  --text-color:#555;
 
-    --tran-03:all 0.2s ease;
-    --tran-03:all 0.3s ease;
-    --tran-04:all 0.3s ease;
-    --tran-05:all 0.3s ease;
+  --border-color:#AAA;
+  --border-color-light:#CCC;
+
+  --sidebar-bgcolor:#fff;
+  --sidebar-text:steelblue;
 }
   
 body {
-    min-height:100vh;
-    background-color:var(--body-color);
-    transition:var(--tran-05);
+  min-height:100vh;
+  background-color:var(--body-color);
+  transition:var(--tran-05);
 }
   
 body.dark {
-    --body-color:#18191a;
-    --sidebar-color:#242526;
-    --primary-color:#666;
-    --primary-color-light:#444;
-    --toggle-color:#FFF;
-    --text-color:#ccc;
+  --body-color:#18191a;
+  --primary-color:#666;
+  --primary-color-light:#444;
+  --toggle-color:#FFF;
+  --text-color:#ccc;
 
-    --border-color:#555;
-    --border-color-light:#444;
+  --border-color:#555;
+  --border-color-light:#444;
+
+  --sidebar-bgcolor:#242526;
+  --sidebar-text:salmon;
 }
   
-/* ===== Sidebar ===== */
+/* --------------------------- Sidebar --------------------------- */
 
 .sidebar {
-    width:250px;
-    background:var(--sidebar-color);
-    transition:var(--tran-05);
-    z-index:100;
+  width:250px;
+  background:var(--sidebar-bgcolor);
+  transition:var(--tran-05);
+  z-index:100;
 }
+
 .sidebar.close {
-    width:88px;
+  width:88px;
 }
 
-.sidebar .icon {
-	display:flex;
-	align-items:center;
-	justify-content:center;
-}
-  
-.sidebar .text, .sidebar .icon {
-    color:var(--text-color);
-    transition:var(--tran-03);
-}
+.sidebar span { opacity:1; }
+.sidebar.close span { opacity:0; }
 
-.sidebar .text { opacity:1; }
-.sidebar.close .text { opacity:0; }
+.sidebar a, .sidebar span { color:var(--sidebar-text); }
+.sidebar .logo { border:2px solid var(--sidebar-text); }
+.sidebar .form-check-input:checked { background-color:var(--sidebar-text); border-color:var(--sidebar-text); }
 
-/* =========================== */
-  
-.sidebar .menu-header {
-    color:var(--text-color);
-}
+.sidebar .selected, .sidebar .toggle { background-color:var(--sidebar-text); }
+.sidebar .selected i, .sidebar .selected span, .sidebar .toggle { color:var(--sidebar-bgcolor); }
+
+/* --------------------------------------------------------------- */
 
 .sidebar .toggle {
-    position:absolute; top:120px; right:-15px;
-    transform:translateY(-50%) rotate(180deg);
-    height:40px;
-    width:40px;
-    background-color:grey;
-    color:var(--sidebar-color);
-    border-radius:3px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    cursor:pointer;
-    transition:var(--tran-05);
+  position:absolute; top:120px; right:-15px;
+  transform:translateY(-50%) rotate(180deg);
+  height:40px;
+  width:40px;
+  border-radius:6px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:var(--tran-05);
 }
-  
-  body.dark .sidebar .menu-header .toggle {
-	color:var(--text-color);
-  }
-  
-  .sidebar.close .toggle {
-	transform:translateY(-50%) rotate(0deg);
-  }
 
-  .sidebar li a {
-	background-color:transparent;
-	display:flex;
-	align-items:center;
-	transition:var(--tran-03);
-  }
+.sidebar.close .toggle {
+  transform:translateY(-50%) rotate(0deg);
+}
 
-  .menuselected { background-color:var(--primary-color); }
-  
-  /* .sidebar li a:hover {
-	background-color:var(--primary-color);
-  } */
-  .sidebar li a:hover .icon,
-  .sidebar li a:hover .text {
-	  color:var(--sidebar-color);
-  }
-  body.dark .sidebar li a:hover .icon,
-  body.dark .sidebar li a:hover .text {
-	  color:var(--text-color);
-  }
+.sidebar li a {
+  background-color:transparent;
+  display:flex;
+  align-items:center;
+  transition:var(--tran-03);
+}
 
 .form-check-input:checked {
   background-color:var(--text-color);
@@ -180,13 +157,13 @@ input[type='range'] {
 }
 
 input[type='date']::-webkit-calendar-picker-indicator {
-  cursor: pointer;
-  filter: invert(0.4);
+  cursor:pointer;
+  filter:invert(0.4);
 }
 
 body.dark input[type='date']::-webkit-calendar-picker-indicator {
-  cursor: pointer;
-  filter: invert(0.6);
+  cursor:pointer;
+  filter:invert(0.6);
 }
 
 .accordion-item {
@@ -197,14 +174,40 @@ body.dark input[type='date']::-webkit-calendar-picker-indicator {
 
 .accordion-button {
   background-color:var(--body-color) !important;
-  text-transform: uppercase;
+  text-transform:uppercase;
 }
 
 .accordion-button:not(.collapsed)::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='grey'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='grey'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
 /* -------------------------------------------------------------------- */
 
-div.fieldset { border-color:var(--border-color-light) !important; }
-div.fieldset .fieldtext { color:var(--border-color-light) !important; background-color:var(--body-color); }
+div.fieldset { 
+  border-color:var(--sidebar-text) !important; 
+}
+
+div.fieldset .fieldtext { 
+  color:var(--sidebar-text) !important; 
+  background-color:var(--body-color); 
+}
+
+/* -------------------------------------------------------------------- */
+
+table.editable {
+  width:100%;
+}
+
+table.editable th {
+  color:var(--text-color) !important;
+  width:50%;
+  padding:10px;
+  text-transform: uppercase;
+}
+
+
+table.editable td {
+  border:1px solid var(--border-color);
+  padding:10px;
+}
+

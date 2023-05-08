@@ -63,10 +63,9 @@ body.dark {
 /* --------------------------------------------------------------- */
 
 .sidebar .toggle {
-  position:absolute; top:120px; right:-15px;
+  position:absolute; top:120px; right:-20px;
   transform:translateY(-50%) rotate(180deg);
-  height:40px;
-  width:40px;
+  width:40px; height:40px;
   border-radius:6px;
   display:flex;
   align-items:center;
@@ -97,40 +96,33 @@ body.dark .form-check-input:checked {
 }
 
 .form-switch .form-check-input {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='grey'/%3e%3c/svg%3e");
+  background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='grey'/%3e%3c/svg%3e");
 }
 .form-switch .form-check-input:focus {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='grey'/%3e%3c/svg%3e");
+  background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='grey'/%3e%3c/svg%3e");
 }
 
 
 body.dark .switch::before {
-  left: 20px;
+  left:20px;
 }
 
 .home {
-  position: absolute;
-  top: 0;
-  left: 250px;
-  height: 100vh;
-  width: calc(100% - 250px);
-  background-color: var(--body-color);
-  transition: var(--tran-05);
+  position:absolute;
+  top:0; left:250px;
+  height:100vh;
+  width:calc(100% - 250px);
+  background-color:var(--body-color);
+  transition:var(--tran-05);
 }
 
 .sidebar.close ~ .home {
-  left: 78px;
-  height: 100vh;
-  width: calc(100% - 78px);
+  left:78px;
+  width:calc(100% - 78px); height:100vh;
 }
 
-.home .text, .home td, .home th {
-  background-color:var(--body-color);
-  color: var(--text-color);
-}
-
-body.dark .home .text, body.dark .home th, body.dark .home td {
-  color: var(--text-color);
+.home .text  {
+  color:var(--sidebar-text);
 }
 
 /* -------------------------------------------------------------------- */
@@ -149,11 +141,11 @@ input::placeholder, select::placeholder, textarea::placeholder, input[type=date]
 }
 
 div:has(>input[type=range]) {
-  border-color:var(--border-color) !important;
+  border-color:var(--sidebar-text) !important;
 }
 
 input[type='range'] {
-  accent-color:var(--primary-color);
+  accent-color:var(--sidebar-text);
 }
 
 input[type='date']::-webkit-calendar-picker-indicator {
@@ -167,9 +159,12 @@ body.dark input[type='date']::-webkit-calendar-picker-indicator {
 }
 
 .accordion-item {
-  color:var(--text-color) !important;
-  border-color:var(--border-color);
+  border-color:var(--sidebar-text);
   background-color:var(--body-color) !important;
+}
+
+.accordion-button {
+  color:var(--sidebar-text) !important;
 }
 
 .accordion-button {
@@ -181,14 +176,18 @@ body.dark input[type='date']::-webkit-calendar-picker-indicator {
   background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='grey'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
+textarea.form-control { border-color:var(--sidebar-text) !important; }
+input.form-control    { border-color:var(--sidebar-text) !important; }
+select.form-select    { border-color:var(--sidebar-text) !important; }
+
 /* -------------------------------------------------------------------- */
 
 div.fieldset { 
-  border-color:var(--sidebar-text) !important; 
+  border-color:var(--primary-color-light) !important;
 }
 
 div.fieldset .fieldtext { 
-  color:var(--sidebar-text) !important; 
+  color:var(--primary-color-light) !important;
   background-color:var(--body-color); 
 }
 
@@ -199,15 +198,14 @@ table.editable {
 }
 
 table.editable th {
-  color:var(--text-color) !important;
+  color:var(--sidebar-text) !important;
   width:50%;
   padding:10px;
-  text-transform: uppercase;
+  text-transform:uppercase;
 }
 
-
 table.editable td {
-  border:1px solid var(--border-color);
+  border:1px solid var(--sidebar-text);
   padding:10px;
 }
 
